@@ -1,0 +1,69 @@
+.toolbar {
+    background-color: #490871;
+    padding: 0 0.2rem;
+    height: 60px;
+    display: flex;
+    flex: 1;
+}
+
+.settings {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.links {
+    display: none;
+}
+
+.links a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.menu-icon {
+    cursor: pointer;
+    position: relative; /* Establece la posición relativa para el pseudo-elemento */
+}
+
+#button {
+    background-color: #ffffff00;
+    border: #ffffff00;
+    color: #ffffff;
+}
+
+#button:hover {
+    cursor:pointer;
+    color: #000000;
+}
+
+.settings .links {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #490871;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: all 0.5s ease; /* Establece una transición suave de 0.5 segundos */
+}
+
+.settings:hover .links {
+    display: flex;
+    /* flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100%; */
+}
+
+/* #linkedin {
+    color: #ffffff00;
+
+} */
