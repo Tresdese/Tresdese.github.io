@@ -1,16 +1,74 @@
-
 .toolbar {
     background-color: #490871;
-    padding: 0 0.2rem;
-    height: 50px;
     display: flex;
-    flex: 1;
+    height: 40px;
+    width: 100%;
+    position: fixed;
 }
 
 .settings {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.social {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    right: 12px;
+}
+
+.social a {
+    margin-right: 12px;
+}
+
+#linkedinIcon {
+    color: #ffffffb5;
+    /* position: absolute; */
+    align-items: center;
+    justify-content: center;
+    /* margin: 12px; */
+}
+
+#igIcon {
+    color: #ffffffb5;
+    align-items: center;
+    justify-content: center;
+}
+
+#faceIcon {
+    color: #ffffffb5;
+    align-items: center;
+    justify-content: center;
+}
+
+#githubIcon {
+    color: #ffffffb5;
+    align-items: center;
+    justify-content: center;
+}
+
+#githubIcon:hover {
+    color: #a2a0a0;
+    cursor: pointer;
+}
+
+#faceIcon:hover {
+    color: #a2a0a0;
+    cursor: pointer;
+}
+
+#igIcon:hover {
+    color: #a2a0a0;
+    cursor: pointer;
+}
+
+#linkedinIcon:hover {
+    color: #a2a0a0;
+    cursor: pointer;
 }
 
 #button {
@@ -21,54 +79,63 @@
 
 #button:hover {
     cursor:pointer;
-    color: #000000;
+    color: #2c2c2c;
 }
 
 .links {
     display: none;
 }
 
-.links p {
+.links a {
+    font-size: 100%;
     color: #ffffff;
+    padding: 20px 0 20px 0;
+    text-align: center;
+    /* border-bottom: 0.5px solid rgb(0, 0, 0); */
     text-decoration: none;
-    /* padding: 0 1rem; */
-    font-size: 12px;
-    font-weight: 600;
-    height: 5%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-width: 100px;
-    border-color: #000000;
+    /* border-bottom: 1px solid black; */
+    /* box-shadow: 2px 0 2px rgba(0, 0, 0, 0.2); */
 }
 
-.menu-icon {
-    cursor: pointer;
-    position: relative; /* Establece la posición relativa para el pseudo-elemento */
+@keyframes desplegar-menu {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+}
+
+
+.settings:hover .links{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 40px;
+    width: 60px;
+    bottom: 100%;
+    height: 100vh;
+    background-color: #490871;
+    animation: desplegar-menu 0.2s ease-in-out forwards;
+}
+
+@keyframes cerrar-menu {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
 }
 
 .settings .links {
-    display: none;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    background-color: #490871;
-    padding: 1rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    transition: all 0.5s ease; /* Establece una transición suave de 0.5 segundos */
-}
-
-.settings:hover .links {
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
-    /* align-items: left; */
-    width: 6%;
-    height: 100%;
-}
-
-#linkedin {
-    color: #ffffff00;
-    
+    position: absolute;
+    top: 40px;
+    width: 60px;
+    bottom: 100%;
+    height: 100vh;
+    background-color: #490871;
+    animation: cerrar-menu 0.2s ease-in-out forwards;
 }
